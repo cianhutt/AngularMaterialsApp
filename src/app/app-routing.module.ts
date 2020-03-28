@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: '', component: HomeComponent,
     children: [
-      {path: 'piitracking', component: PiitrackingComponent},
+      {path: '', component: PiitrackingComponent},
       {path: 'login', component: LoginComponent}
     ]
   }
