@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface File {
   server: string;
@@ -26,11 +27,15 @@ const files: File[] = [
 export class PiitrackingComponent implements OnInit {
 
   displayedColumns: string[] = ['server', 'fileName', 'pii', 'full'];
-  dataSource = files;
+  dataSource = new MatTableDataSource(files);
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  filter(filterValue:string){
+    this.dataSource.filter = filterValue.trim();
   }
 
 //   files = [

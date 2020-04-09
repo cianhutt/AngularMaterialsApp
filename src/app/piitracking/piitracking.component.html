@@ -14,7 +14,7 @@
               <div class="id-name">
                       <p>Name Of Identity</p>
                       <mat-form-field class="example-full-width">
-                        <input matInput>
+                        <input (keyup)="filter($event.target.value)" matInput>
                       </mat-form-field>
                       <mat-form-field class="example-full-width">
                         <input matInput>
