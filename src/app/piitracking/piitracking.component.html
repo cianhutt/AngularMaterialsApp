@@ -48,4 +48,20 @@
                                 </div>
                         </div>
                 </div>
+                <div class="file-table">
+                        <div class="row file-table-headings">
+                                <div class="col-md-3"><p>Server<span class="glyphicon glyphicon-chevron-down"></span></p></div>
+                                <div class="col-md-3"><p>File Name<span class="glyphicon glyphicon-chevron-down"></span></p></div>
+                                <div class="col-md-3"><p>PII<span class="glyphicon glyphicon-chevron-down"></span></p></div>
+                                <div class="col-md-3"><p>Full<span class="glyphicon glyphicon-chevron-down"></span></p></div>
+                        </div>
+                        
+                                <div class="row file" *ngFor="let file of files">
+                                       <div class="col-md-3"><p>{{file.server}}</p></div> 
+                                       <div class="col-md-3"><p>{{file.filename}}</p></div> 
+                                       <div class="col-md-3"><p>{{file.pii}}</p></div> 
+                                       <div class="col-md-3"><p>{{file.full}}<p></div> 
+                                </div>
+                        
+                </div>
 </div>
