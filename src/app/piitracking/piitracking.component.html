@@ -6,9 +6,8 @@
                 </div>
                 <div class="col-md-2">
                         <button id="trackPIIData" mat-button>Track PII Data</button>
-                
-                </div></div>
-        
+                </div>
+        </div>
         </div>
         <div class="id-search">
               <div class="id-name">
@@ -16,11 +15,7 @@
                       <mat-form-field class="example-full-width">
                         <input (keyup)="filter($event.target.value)" matInput>
                       </mat-form-field>
-                      <mat-form-field class="example-full-width">
-                        <input matInput>
-                      </mat-form-field>
               </div>
-              <button mat-button>Search</button>
         </div>
        
                 <div class="row">
@@ -48,54 +43,24 @@
                                 </div>
                         </div>
                 </div>
-                <!-- <div class="file-table">
-                        <div class="row file-table-headings">
-                                <div class="col-md-3"><p>Server<span class="glyphicon glyphicon-chevron-down"></span></p></div>
-                                <div class="col-md-3"><p>File Name<span class="glyphicon glyphicon-chevron-down"></span></p></div>
-                                <div class="col-md-3"><p>PII<span class="glyphicon glyphicon-chevron-down"></span></p></div>
-                                <div class="col-md-3"><p>Full<span class="glyphicon glyphicon-chevron-down"></span></p></div>
-                        </div>
-                        
-                                <div class="row file" *ngFor="let file of files">
-                                       <div class="col-md-3"><p>{{file.server}}</p></div> 
-                                       <div class="col-md-3"><p>{{file.filename}}</p></div> 
-                                       <div class="col-md-3"><p>{{file.pii}}</p></div> 
-                                       <div class="col-md-3"><p>{{file.full}}<p></div> 
-                                </div>
-                        
-                </div> -->
                 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-                        <!--- Note that these columns can be defined in any order.
-                              The actual rendered columns are set as a property on the row definition" -->
-                      
-                        <!-- Position Column -->
                         <ng-container matColumnDef="server">
                           <th mat-header-cell *matHeaderCellDef>Server<span class="glyphicon glyphicon-chevron-down"></span></th>
                           <td mat-cell *matCellDef="let files"> {{files.server}} </td>
                         </ng-container>
-                      
-                        <!-- Name Column -->
                         <ng-container matColumnDef="fileName">
                           <th mat-header-cell *matHeaderCellDef>File Name<span class="glyphicon glyphicon-chevron-down"></span></th>
                           <td mat-cell *matCellDef="let files"> {{files.fileName}} </td>
                         </ng-container>
-                      
-                        <!-- Weight Column -->
                         <ng-container matColumnDef="pii">
                           <th mat-header-cell *matHeaderCellDef>PII<span class="glyphicon glyphicon-chevron-down"></span></th>
                           <td mat-cell *matCellDef="let files"> {{files.pii}} </td>
                         </ng-container>
-                      
-                        <!-- Symbol Column -->
                         <ng-container matColumnDef="full">
                           <th mat-header-cell *matHeaderCellDef>Full<span class="glyphicon glyphicon-chevron-down"></span></th>
                           <td mat-cell *matCellDef="let files"> {{files.full}} </td>
                         </ng-container>
-                      
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                      </table>
-                      
-                      
+                      </table>         
 </div>
