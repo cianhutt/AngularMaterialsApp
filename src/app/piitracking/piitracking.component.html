@@ -2,65 +2,67 @@
         <div class="heading">
                 <div class="row">
                         <div class="col-md-10">
-                        <h1>PII Tracking</h1>
+                                <h1>PII Tracking</h1>
+                        </div>
+                        <div class="col-md-2">
+                                <button id="trackPIIData" mat-button>Track PII Data</button>
+                        </div>
                 </div>
-                <div class="col-md-2">
-                        <button id="trackPIIData" mat-button>Track PII Data</button>
-                </div>
-        </div>
         </div>
         <div class="id-search">
               <div class="id-name">
-                      <p>Name Of Identity</p>
+                      <p>Name Of Entity</p>
                       <mat-form-field class="example-full-width">
-                        <input (keyup)="filter($event.target.value)" matInput>
+                              <input (keyup)="filter($event.target.value)" matInput>
                       </mat-form-field>
+                      <p>Enter a user name, a personal name or surname, a device name, a repository name or a cloud service name</p>
               </div>
         </div>
        
-                <div class="row">
-                        <div class="col-md-6">
-                                <div class="gdpr-files">
-                                        <p>GDPR Files</p>
-                                        <span><sup>#</sup>21975</span>
-                                </div>
-                        </div>
-                        <div class="col-md-6">
-                                <div class="entities-found">
-                                        <p>Entities Found</p>
-                                </div>
+        <div class="row">
+                <div class="col-md-6">
+                        <div class="gdpr-files">
+                                <p>GDPR Files</p>
+                                <span><sup>#</sup>21975</span>
                         </div>
                 </div>
-                <div class="row">
-                        <div class="col-md-6">
+                <div class="col-md-6">
+                        <div class="entities-found">
+                                <p>Entities Found</p>
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-md-6">
                         <div class="file-location-distribution">
-                                        <p>File Location Distribution</p>
+                                <p>File Location Distribution</p>
                         </div> 
-                        </div>
-                        <div class="col-md-6">
-                                <div class="gdpr-file-types-distribution">
-                                        <p>GDPR File Types Distribution</p>
-                                </div>
+                </div>
+                <div class="col-md-6">
+                        <div class="gdpr-file-types-distribution">
+                                <p>GDPR File Types Distribution</p>
                         </div>
                 </div>
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-                        <ng-container matColumnDef="server">
-                          <th mat-header-cell *matHeaderCellDef>Server<span class="glyphicon glyphicon-chevron-down"></span></th>
-                          <td mat-cell *matCellDef="let files"> {{files.server}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="fileName">
-                          <th mat-header-cell *matHeaderCellDef>File Name<span class="glyphicon glyphicon-chevron-down"></span></th>
-                          <td mat-cell *matCellDef="let files"> {{files.fileName}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="pii">
-                          <th mat-header-cell *matHeaderCellDef>PII<span class="glyphicon glyphicon-chevron-down"></span></th>
-                          <td mat-cell *matCellDef="let files"> {{files.pii}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="full">
-                          <th mat-header-cell *matHeaderCellDef>Full<span class="glyphicon glyphicon-chevron-down"></span></th>
-                          <td mat-cell *matCellDef="let files"> {{files.full}} </td>
-                        </ng-container>
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                      </table>         
+        </div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="server">
+                        <th mat-header-cell *matHeaderCellDef>Server<span class="glyphicon glyphicon-chevron-down"></span></th>
+                        <td mat-cell *matCellDef="let files"> {{files.server}} </td>
+                </ng-container>
+                <ng-container matColumnDef="fileName">
+                        <th mat-header-cell *matHeaderCellDef>File Name<span class="glyphicon glyphicon-chevron-down"></span></th>
+                        <td mat-cell *matCellDef="let files"> {{files.fileName}} </td>
+                </ng-container>
+                <ng-container matColumnDef="pii">
+                        <th mat-header-cell *matHeaderCellDef>PII<span class="glyphicon glyphicon-chevron-down"></span></th>
+                        <td mat-cell *matCellDef="let files"> {{files.pii}} </td>
+                </ng-container>
+                <ng-container matColumnDef="full">
+                        <th mat-header-cell *matHeaderCellDef>Full<span class="glyphicon glyphicon-chevron-down"></span></th>
+                        <td mat-cell *matCellDef="let files"> {{files.full}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOption]="[5,10,20]" showFirstLastButtons></mat-paginator>        
 </div>
