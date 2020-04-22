@@ -16,6 +16,8 @@ const files: File[] = [
   {server: 'FS-42', fileName: 'RenewalForm.pdf', pii: 'Type', full:'C:/Lucy/RenewalForm.pdf'},
   {server: 'FS-21', fileName: 'Tax-2019.pdf', pii: 'Name', full:'C:/Tom/Tax-2019.pdf'},
   {server: 'FS-21', fileName: 'Tax-2018.pdf', pii: 'Name', full:'C:/Greg/Tax-2018.pdf'},
+  {server: 'FS-21', fileName: 'Accounts-2019.pdf', pii: 'Name', full:'C:/Jack/Accounts-2018.pdf'},
+  {server: 'FS-21', fileName: 'Accounts-2019.pdf', pii: 'Name', full:'C:/Jack/Accounts-2019.pdf'},
 ];
 
 
@@ -37,16 +39,4 @@ export class PiitrackingComponent implements OnInit {
   filter(filterValue:string){
     this.dataSource.filter = filterValue.trim();
   }
-
-//   files = [
-//     {server: 'FS-10', filename: 'JohnSmithResume.doc', pii: 'Name', full:'C:/John/JohnSmithResume.doc'},
-//     {server: 'FS-12', filename: 'JohnSmithResume.pdf', pii: 'Name', full:'C:/John/JohnSmithResume.pdf'},
-//     {server: 'FS-14', filename: 'MaryLeeResume.pdf', pii: 'PIN', full:'C:/Mary/MaryLeeResume.pdf'},
-//     {server: 'FS-21', filename: 'HousingApplication.pdf', pii: 'Name', full:'C:/Dave/HousingApplication.pdf'},
-//     {server: 'FS-42', filename: 'RenewalForm.pdf', pii: 'Type', full:'C:/Lucy/RenewalForm.pdf'},
-//     {server: 'FS-21', filename: 'Tax-2019.pdf', pii: 'Name', full:'C:/Tom/Tax-2019.pdf'},
-//     {server: 'FS-21', filename: 'Tax-2018.pdf', pii: 'Name', full:'C:/Greg/Tax-2018.pdf'},
-// ];
-
-
 }
