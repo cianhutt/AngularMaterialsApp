@@ -9,25 +9,24 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { CustomMaterialModule } from './material/material.module';
-
 import {FormsModule} from '@angular/forms';
+import {ChartsModule} from 'ng2-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
     PiitrackingComponent,
     LoginComponent,
     HeaderComponent,
-    HomeComponent,
-    
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    CustomMaterialModule
-   
-
+    CustomMaterialModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
