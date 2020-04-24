@@ -37,11 +37,21 @@
                 <div class="col-md-6">
                         <div class="file-location-distribution">
                                 <p>File Location Distribution</p>
+                                <canvas baseChart
+                                        [data]="fildDoughnutChartData"
+                                        [labels]="fildDoughnutChartLabels"
+                                        [chartType]="fildDoughnutChartType"
+                                ></canvas>
                         </div> 
                 </div>
                 <div class="col-md-6">
                         <div class="gdpr-file-types-distribution">
                                 <p>GDPR File Types Distribution</p>
+                                <canvas baseChart
+                                        [data]="gdprDoughnutChartData"
+                                        [labels]="gdprDoughnutChartLabels"
+                                        [chartType]="gdprDoughnutChartType"
+                                ></canvas>
                         </div>
                 </div>
         </div>

@@ -31,6 +31,14 @@ export class PiitrackingComponent implements OnInit {
   displayedColumns: string[] = ['server', 'fileName', 'pii', 'full'];
   dataSource = new MatTableDataSource(files);
 
+  public fildDoughnutChartLabels = ['IT-FS-01', 'HR-FS-03', 'G-Drive', 'Dropbox', 'Other'];
+  public fildDoughnutChartData = [45, 24, 15, 8, 8];
+  public fildDoughnutChartType = 'doughnut';
+
+  public gdprDoughnutChartLabels = ['XLSX', 'DOCX', 'PDF', 'HTML', 'Other'];
+  public gdprDoughnutChartData = [42, 32, 12, 9, 5];
+  public gdprDoughnutChartType = 'doughnut';
+
   constructor() { }
 
   ngOnInit(): void {
