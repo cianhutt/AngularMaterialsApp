@@ -15,7 +15,7 @@
         }
     
     .id-search{
-        padding: 1rem;
+        padding: 2rem;
         margin-bottom: 2rem;
         background-color: rgb(24, 24, 43);
 
@@ -36,12 +36,13 @@
     }
     .gdpr-files, .entities-found, .file-location-distribution, .gdpr-file-types-distribution{
         background-color: rgb(24, 24, 43);
-        padding: 1rem;
+        padding: 2rem;
         color: white;
     }
     .gdpr-files, .entities-found{
         height: 120px;
         margin-bottom: 2rem;
+        position: relative;
         
         span{
             font-size: 4rem;
@@ -51,6 +52,42 @@
                 top: -1em;
                 margin-right: 1rem;
             }
+        }
+        .circlecontainer{
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            right: 150px;
+            top: 10px;
+        }
+        .prec{
+            top: 25px;
+            position: relative;
+            font-size: 30px;
+        }
+        
+        .circle{
+            position: relative;
+            top: 5px;
+            left: 5px;
+            text-align: center;
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            background-color: #18182b;
+        }
+        
+        .active-border{
+            position: relative;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: rgb(54, 129, 241);
+            background-image:
+                linear-gradient(162deg, transparent 50%, rgb(181, 182, 204) 50%),
+                linear-gradient(90deg, rgb(181, 182, 204) 50%, transparent 50%);
+            
         }
 
         
